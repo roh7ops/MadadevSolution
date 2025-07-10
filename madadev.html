@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadaDev Solutions - Business Plan Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .step-card {
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        .step-card:not(:last-child)::after {
+            content: '↓'; /* Down arrow for vertical flow */
+            position: absolute;
+            bottom: -2.5rem; /* Adjust to place arrow between cards */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #d1d5db; /* gray-300 */
+            z-index: 10;
+        }
+        @media (min-width: 768px) {
+            .step-card:not(:last-child)::after {
+                content: '→'; /* Right arrow for horizontal flow */
+                bottom: auto;
+                top: 50%;
+                left: auto;
+                right: -2.5rem; /* Adjust to place arrow between cards */
+                transform: translateY(-50%);
+            }
+        }
+        .step-card:last-child::after {
+            content: none; /* No arrow after the last card */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-[#003f5c] text-white text-center p-8 md:p-12">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight">MadaDev Solutions</h1>
+        <p class="mt-4 text-lg md:text-xl font-light max-w-3xl mx-auto">Visualisation du plan d'affaires pour une ESN agile et innovante à Madagascar, prête à conquérir les marchés locaux et internationaux.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="kpis" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-center mb-12">
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#003f5c]">Investissement Initial</h3>
+                <p class="text-5xl font-black text-[#ff7c43] mt-2">61,46M</p>
+                <p class="text-gray-500">Ariary (MGA)</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#003f5c]">Objectif C.A. 6 Mois</h3>
+                <p class="text-5xl font-black text-[#f95d6a] mt-2">98,55M</p>
+                <p class="text-gray-500">Ariary (MGA)</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#003f5c]">Équipe de Démarrage</h3>
+                <p class="text-5xl font-black text-[#a05195] mt-2">6</p>
+                <p class="text-gray-500">Personnes</p>
+            </div>
+        </section>
+
+        <section id="idea-origin" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">L'Origine de l'Idée : Une Vision Née de l'Expérience</h2>
+            <p class="text-gray-600 mb-4 text-center max-w-3xl mx-auto">
+                L'idée de créer MadaDev Solutions est née de mon expérience directe et quotidienne au sein d'une ESN existante à Madagascar. En travaillant sur le terrain, j'ai pu identifier des opportunités claires et des besoins non satisfaits sur le marché, tant au niveau local qu'international.
+            </p>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto">
+                Cette immersion m'a permis de comprendre les forces et les défis du secteur IT malagasy, et de forger une vision pour une entreprise qui pourrait capitaliser sur le talent local, offrir des services de haute qualité à des coûts compétitifs, et se positionner comme un partenaire agile et fiable pour la transformation digitale. C'est de cette observation et de cette ambition qu'est né le projet MadaDev Solutions.
+            </p>
+        </section>
+
+        <section id="launch-steps" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-8">Étapes Clés pour Lancer MadaDev Solutions à Madagascar</h2>
+            <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+                Le lancement d'une ESN réussie à Madagascar suit une série d'étapes stratégiques, de la conception initiale à la croissance continue.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-16 md:gap-y-12 relative">
+                <div class="step-card">
+                    <div class="text-4xl font-black text-[#ff7c43] mb-2">1.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Étude de marché</h3>
+                    <p class="text-gray-600">Analysez les forces et faiblesses des acteurs existants (expertise, tarification, services) pour identifier votre positionnement unique.</p>
+                </div>
+                <div class="step-card">
+                    <div class="text-4xl font-black text-[#f95d6a] mb-2">2.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Positionnement stratégique</h3>
+                    <p class="text-gray-600">Déterminez votre proposition de valeur distinctive : spécialisation sur des niches (ex. ERP, mobile), qualité de service, ou modèle de localisation (remote ou onsite).</p>
+                </div>
+                <div class="step-card">
+                    <div class="text-4xl font-black text-[#a05195] mb-2">3.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Constitution de l’équipe</h3>
+                    <p class="text-gray-600">Recrutez des ingénieurs et développeurs qualifiés via les job boards locaux, les universités techniques, et des plateformes comme LinkedIn (ex. Sylvain RAKOTONIRINA, profil ESN à Tana).</p>
+                </div>
+                <div class="step-card">
+                    <div class="text-4xl font-black text-[#665191] mb-2">4.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Formalités & cadre légal</h3>
+                    <p class="text-gray-600">Procédez à l'enregistrement de la société, obtenez toutes les licences nécessaires et explorez les avantages fiscaux via la zone franche si applicable.</p>
+                </div>
+                <div class="step-card">
+                    <div class="text-4xl font-black text-[#2f4b7c] mb-2">5.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Infrastructure & outils</h3>
+                    <p class="text-gray-600">Aménagez un local adapté (bureaux, espaces de coworking comme ViMa Business Centers), mettez en place une infrastructure IT sécurisée et des outils de gestion RH.</p>
+                </div>
+                <div class="step-card">
+                    <div class="text-4xl font-black text-[#003f5c] mb-2">6.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Marketing & prospection</h3>
+                    <p class="text-gray-600">Développez votre visibilité sur LinkedIn, participez activement aux salons professionnels à Madagascar et en France/Europe, et utilisez les plateformes digitales pour pitcher vos services.</p>
+                </div>
+                 <div class="step-card">
+                    <div class="text-4xl font-black text-[#ff7c43] mb-2">7.</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Pilotage & croissance</h3>
+                    <p class="text-gray-600">Mettez en place des indicateurs clés de performance (KPI), adoptez des méthodes agiles, assurez une gestion rigoureuse de la qualité, du secrétariat, de la comptabilité et du juridique, et maintenez une veille concurrentielle constante.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="market-analysis" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">Analyse du Marché : Une Opportunité en Or</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="font-semibold text-xl mb-2 text-[#2f4b7c]">Un secteur en pleine effervescence</h3>
+                    <p class="text-gray-600 mb-4">Le secteur numérique malagasy est en pleine croissance, porté par une forte demande locale et une attractivité grandissante pour l'externalisation offshore. Notre ambition s'inscrit dans cette dynamique positive.</p>
+                    <div class="chart-container h-64 md:h-72">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                     <p class="text-center text-sm text-gray-500 mt-2">Le numérique vise 6% du PIB national, un terreau fertile pour MadaDev Solutions.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-xl mb-2 text-[#2f4b7c]">Analyse SWOT</h3>
+                    <p class="text-gray-600 mb-4">Notre positionnement stratégique est clair, capitalisant sur nos forces et les opportunités du marché tout en maîtrisant les risques.</p>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="bg-green-100 text-green-800 p-4 rounded-lg">
+                            <h4 class="font-bold">Forces</h4>
+                            <ul class="list-disc list-inside mt-2"><li>Coûts compétitifs</li><li>Expertise locale</li><li>Maîtrise des langues</li><li>Agilité</li></ul>
+                        </div>
+                        <div class="bg-red-100 text-red-800 p-4 rounded-lg">
+                            <h4 class="font-bold">Faiblesses</h4>
+                            <ul class="list-disc list-inside mt-2"><li>Notoriété à bâtir</li><li>Investissement limité</li><li>Dépendance clients</li></ul>
+                        </div>
+                        <div class="bg-blue-100 text-blue-800 p-4 rounded-lg">
+                            <h4 class="font-bold">Opportunités</h4>
+                            <ul class="list-disc list-inside mt-2"><li>Croissance du marché</li><li>Pénurie de talents IT EU</li><li>Nouvelles technologies</li></ul>
+                        </div>
+                        <div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg">
+                            <h4 class="font-bold">Menaces</h4>
+                            <ul class="list-disc list-inside mt-2"><li>Concurrence forte</li><li>Instabilité potentielle</li><li>Turnover du personnel</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="grid grid-cols-1 gap-8 mb-12">
+            <section id="investment" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-2">Répartition de l'Investissement Initial</h2>
+                <p class="text-center text-gray-600 mb-6">Chaque Ariary est alloué stratégiquement pour maximiser nos chances de succès et assurer un démarrage solide.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="investmentChart"></canvas>
+                </div>
+            </section>
+
+            <section id="team" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-2">Structure de Coûts & Grille Tarifaire</h2>
+                <p class="text-center text-gray-600 mb-6">Une équipe compétente est notre plus grand atout. Nos coûts salariaux sont maîtrisés et notre grille tarifaire est conçue pour être compétitive et juste.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="pricingChart"></canvas>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-[#2f4b7c] mb-4">Tableau des Salaires Mensuels Estimés</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <thead>
+                                <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Rôle</th>
+                                    <th class="py-3 px-6 text-right">Salaire Net (MGA)</th>
+                                    <th class="py-3 px-6 text-right">Charges Sociales (MGA)</th>
+                                    <th class="py-3 px-6 text-right">Coût Total (MGA)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700 text-sm font-light">
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Gérant / Directeur Général</td>
+                                    <td class="py-3 px-6 text-right">1 500 000</td>
+                                    <td class="py-3 px-6 text-right">300 000</td>
+                                    <td class="py-3 px-6 text-right font-semibold">1 800 000</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Chef de Projet / Tech Lead</td>
+                                    <td class="py-3 px-6 text-right">1 200 000</td>
+                                    <td class="py-3 px-6 text-right">240 000</td>
+                                    <td class="py-3 px-6 text-right font-semibold">1 440 000</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Développeur Confirmé (x2)</td>
+                                    <td class="py-3 px-6 text-right">1 800 000</td>
+                                    <td class="py-3 px-6 text-right">360 000</td>
+                                    <td class="py-3 px-6 text-right font-semibold">2 160 000</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Développeur Junior</td>
+                                    <td class="py-3 px-6 text-right">600 000</td>
+                                    <td class="py-3 px-6 text-right">120 000</td>
+                                    <td class="py-3 px-6 text-right font-semibold">720 000</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Assistant Administratif / RH</td>
+                                    <td class="py-3 px-6 text-right">333 333</td>
+                                    <td class="py-3 px-6 text-right">66 667</td>
+                                    <td class="py-3 px-6 text-right font-semibold">400 000</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-t-2 border-gray-300">
+                                    <td class="py-3 px-6 text-left font-bold">Total Mensuel Estimé</td>
+                                    <td class="py-3 px-6 text-right font-bold">5 433 333</td>
+                                    <td class="py-3 px-6 text-right font-bold">1 086 667</td>
+                                    <td class="py-3 px-6 text-right font-bold text-[#003f5c]">6 520 000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4 text-center">Les salaires sont des estimations et peuvent varier. Les charges sociales sont calculées à environ 20% du salaire net.</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="forecast" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">Prévisions sur 6 Mois : Une Trajectoire de Croissance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="font-semibold text-xl mb-2 text-[#665191]">Croissance du Chiffre d'Affaires</h3>
+                    <p class="text-gray-600 mb-4">Notre prévision des ventes est basée sur une augmentation progressive du taux d'occupation de notre équipe, reflétant une montée en puissance commerciale réaliste.</p>
+                    <div class="chart-container">
+                        <canvas id="salesForecastChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-xl mb-2 text-[#d45087]">Évolution de la Trésorerie</h3>
+                    <p class="text-gray-600 mb-4">La gestion rigoureuse de la trésorerie est la clé. Notre plan montre un solde positif constant, assurant la pérennité de l'entreprise dès les premiers mois.</p>
+                    <div class="chart-container">
+                        <canvas id="cashFlowChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing-strategy" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">Stratégie d'Acquisition Client</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">Nous déploierons une stratégie multicanale pour atteindre nos cibles, en combinant marketing digital, partenariats stratégiques et réseautage actif.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+                <div class="text-center">
+                    <div class="bg-[#003f5c] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg"><p class="font-bold">Digital</p></div>
+                    <p class="mt-2 text-sm">LinkedIn & SEO</p>
+                </div>
+                <div class="text-5xl text-gray-300 font-thin hidden md:block">&rarr;</div>
+                <div class="text-2xl text-gray-300 font-thin md:hidden">&darr;</div>
+                <div class="text-center">
+                    <div class="bg-[#665191] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg"><p class="font-bold">Réseaux</p></div>
+                    <p class="mt-2 text-sm">Partenariats & Événements</p>
+                </div>
+                <div class="text-5xl text-gray-300 font-thin hidden md:block">&rarr;</div>
+                <div class="text-2xl text-gray-300 font-thin md:hidden">&darr;</div>
+                <div class="text-center">
+                    <div class="bg-[#d45087] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg"><p class="font-bold">Plateformes</p></div>
+                    <p class="mt-2 text-sm">Malt & Upwork</p>
+                </div>
+                <div class="text-5xl text-gray-300 font-thin hidden md:block">&rarr;</div>
+                 <div class="text-2xl text-gray-300 font-thin md:hidden">&darr;</div>
+                <div class="text-center">
+                    <div class="bg-[#ff7c43] text-white rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-2xl ring-4 ring-[#ffa600]"><p class="font-black text-lg">Clients</p></div>
+                    <p class="mt-2 text-sm font-semibold">PME & Startups</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="llm-features" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">Outils Intelligents pour MadaDev Solutions </h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">Utilisez la puissance de l'IA pour affiner votre stratégie et explorer de nouvelles perspectives pour MadaDev Solutions.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-[#2f4b7c] mb-4"> Générateur de Slogans & Mission Statement</h3>
+                    <p class="text-gray-600 mb-4">Obtenez des idées percutantes pour votre communication.</p>
+                    <button id="generateSloganBtn" class="bg-[#ffa600] hover:bg-[#ff7c43] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 w-full mb-4">Générer Idées </button>
+                    <div id="sloganOutput" class="bg-gray-50 p-4 rounded-lg text-gray-700 min-h-[100px] flex items-center justify-center text-center">
+                        <span class="text-gray-400">Cliquez pour générer des slogans et une mission statement.</span>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-[#a05195] mb-4"> Analyse du Marché IT à Madagascar</h3>
+                    <p class="text-gray-600 mb-4">Posez une question sur les tendances du marché IT local.</p>
+                    <input type="text" id="marketQuestionInput" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:ring-[#a05195] focus:border-[#a05195]" placeholder="Ex: Quelles sont les technologies émergentes à Madagascar ?">
+                    <button id="analyzeMarketBtn" class="bg-[#d45087] hover:bg-[#665191] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 w-full mb-4">Analyser le Marché </button>
+                    <div id="marketAnalysisOutput" class="bg-gray-50 p-4 rounded-lg text-gray-700 min-h-[100px] flex items-center justify-center text-center">
+                        <span class="text-gray-400">Entrez votre question et cliquez sur "Analyser le Marché".</span>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-[#ff7c43] mb-4"> Générateur de Pitch de Recrutement</h3>
+                    <p class="text-gray-600 mb-4">Créez un pitch pour attirer les meilleurs talents.</p>
+                    <textarea id="recruitmentPitchInput" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:ring-[#ff7c43] focus:border-[#ff7c43]" rows="3" placeholder="Ex: Développeur Fullstack, junior, passionné par React et Node.js, cherche opportunité à Antananarivo."></textarea>
+                    <button id="generateRecruitmentPitchBtn" class="bg-[#ffa600] hover:bg-[#ff7c43] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 w-full mb-4">Générer Pitch </button>
+                    <div id="recruitmentPitchOutput" class="bg-gray-50 p-4 rounded-lg text-gray-700 min-h-[100px] flex items-center justify-center text-center">
+                        <span class="text-gray-400">Décrivez le profil recherché et cliquez sur "Générer Pitch".</span>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-[#665191] mb-4"> Générateur d'Idées de Projets</h3>
+                    <p class="text-gray-600 mb-4">Découvrez de nouvelles opportunités de projets pour MadaDev Solutions.</p>
+                    <input type="text" id="projectIdeaInput" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:ring-[#665191] focus:border-[#665191]" placeholder="Ex: Projets pour le secteur de la santé à Madagascar">
+                    <button id="generateProjectIdeaBtn" class="bg-[#d45087] hover:bg-[#a05195] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 w-full mb-4">Générer Idées de Projets </button>
+                    <div id="projectIdeaOutput" class="bg-gray-50 p-4 rounded-lg text-gray-700 min-h-[100px] flex items-center justify-center text-center">
+                        <span class="text-gray-400">Décrivez un domaine ou une technologie et cliquez sur "Générer Idées de Projets".</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-8 mt-8 bg-[#003f5c] text-gray-300">
+        <p>Cette infographie est basée sur le plan d'affaires de MadaDev Solutions.</p>
+        <p class="text-sm mt-2">&copy; 2025 MadaDev Solutions. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const wrapLabel = (label, maxLength) => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine += (currentLine.length === 0 ? '' : ' ') + word;
+                }
+            });
+            lines.push(currentLine);
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const chartColors = ['#003f5c', '#665191', '#d45087', '#ff7c43', '#ffa600', '#2f4b7c', '#a05195', '#f95d6a'];
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#4a5568',
+                        font: {
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#003f5c',
+                    titleFont: {
+                        weight: 'bold'
+                    },
+                    bodyFont: {
+                        family: "'Inter', sans-serif"
+                    },
+                    padding: 10,
+                    cornerRadius: 4,
+                    boxPadding: 4
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: '#4a5568' },
+                    grid: {
+                        color: '#e2e8f0'
+                    }
+                },
+                x: {
+                    ticks: { color: '#4a5568' },
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        const marketShareChartCtx = document.getElementById('marketShareChart').getContext('2d');
+        new Chart(marketShareChartCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Secteur Numérique (Objectif)', 'Autres Secteurs'],
+                datasets: [{
+                    label: 'Contribution au PIB',
+                    data: [6, 94],
+                    backgroundColor: ['#ff7c43', '#e2e8f0'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                cutout: '70%',
+                plugins: {
+                     ...defaultChartOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { display: false },
+                    x: { display: false }
+                }
+            }
+        });
+
+        const investmentChartCtx = document.getElementById('investmentChart').getContext('2d');
+        new Chart(investmentChartCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    wrapLabel('Frais de démarrage (Constitution, Loyer)', 20),
+                    wrapLabel('Aménagement des locaux', 20),
+                    wrapLabel('Équipement IT', 20),
+                    wrapLabel('Marketing & Logiciels', 20),
+                    wrapLabel('Fonds de roulement (3 mois)', 20)
+                ],
+                datasets: [{
+                    label: 'Répartition en MGA',
+                    data: [4500000, 7500000, 24000000, 4800000, 24060000],
+                    backgroundColor: chartColors,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    legend: {
+                        position: 'right',
+                        align: 'center',
+                        labels: {
+                            color: '#4a5568',
+                            font: {
+                                family: "'Inter', sans-serif"
+                            },
+                            boxWidth: 20,
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+
+        const pricingChartCtx = document.getElementById('pricingChart').getContext('2d');
+        new Chart(pricingChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Développeur Junior', 'Développeur Confirmé', 'Développeur Senior', ['Chef de Projet', '/ Consultant']],
+                datasets: [{
+                    label: 'TJM en MGA',
+                    data: [250000, 350000, 500000, 600000],
+                    backgroundColor: ['#ffa600', '#ff7c43', '#f95d6a', '#d45087'],
+                    borderRadius: 4,
+                    barPercentage: 0.7
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                plugins: {
+                     ...defaultChartOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            callback: function(value) { return value / 1000 + 'k'; }
+                        }
+                    }
+                }
+            }
+        });
+
+        const salesForecastChartCtx = document.getElementById('salesForecastChart').getContext('2d');
+        new Chart(salesForecastChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mois 1', 'Mois 2', 'Mois 3', 'Mois 4', 'Mois 5', 'Mois 6'],
+                datasets: [{
+                    label: 'Ventes estimées (MGA)',
+                    data: [8100000, 13500000, 16200000, 18900000, 20250000, 21600000],
+                    borderColor: '#f95d6a',
+                    backgroundColor: 'rgba(249, 93, 106, 0.1)',
+                    tension: 0.3,
+                    fill: true,
+                    pointBackgroundColor: '#f95d6a',
+                    pointBorderColor: '#ffffff',
+                    pointHoverRadius: 6,
+                    pointRadius: 4,
+                }]
+            },
+            options: {
+                 ...defaultChartOptions,
+                 plugins: {
+                     ...defaultChartOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            callback: function(value) { return value / 1000000 + 'M'; }
+                        }
+                    }
+                }
+            }
+        });
+
+        const cashFlowChartCtx = document.getElementById('cashFlowChart').getContext('2d');
+        new Chart(cashFlowChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['Départ', 'Mois 1', 'Mois 2', 'Mois 3', 'Mois 4', 'Mois 5', 'Mois 6'],
+                datasets: [{
+                    label: 'Solde de trésorerie (MGA)',
+                    data: [61460000, 52740000, 52120000, 55400000, 62880000, 73060000, 83090000],
+                    borderColor: '#665191',
+                    backgroundColor: 'rgba(102, 81, 145, 0.1)',
+                    tension: 0.3,
+                    fill: true,
+                    pointBackgroundColor: '#665191',
+                    pointBorderColor: '#ffffff',
+                    pointHoverRadius: 6,
+                    pointRadius: 4,
+                }]
+            },
+            options: {
+                 ...defaultChartOptions,
+                 plugins: {
+                     ...defaultChartOptions.plugins,
+                    legend: { display: false }
+                },
+                 scales: {
+                    y: {
+                        beginAtZero: false,
+                        ticks: {
+                            callback: function(value) { return value / 1000000 + 'M'; }
+                        }
+                    }
+                }
+            }
+        });
+
+        document.getElementById('generateSloganBtn').addEventListener('click', async () => {
+            const sloganOutput = document.getElementById('sloganOutput');
+            sloganOutput.innerHTML = '<span class="text-gray-400">Génération en cours...</span>';
+            const btn = document.getElementById('generateSloganBtn');
+            btn.disabled = true;
+
+            const prompt = `Génère 3 slogans courts et percutants ainsi qu'une proposition de mission statement pour une ESN nommée 'MadaDev Solutions' spécialisée dans le développement web et mobile sur mesure, l'intégration de solutions logicières et le conseil en transformation digitale à Madagascar. La société vise des clients locaux et internationaux, en mettant l'accent sur la qualité, la compétitivité des coûts et l'agilité. Présente les résultats sous forme de liste.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    sloganOutput.innerHTML = `<pre class="whitespace-pre-wrap text-left">${text}</pre>`;
+                } else {
+                    sloganOutput.innerHTML = '<span class="text-red-500">Erreur: Impossible de générer les idées.</span>';
+                }
+            } catch (error) {
+                console.error('Erreur lors de l\'appel API Gemini:', error);
+                sloganOutput.innerHTML = '<span class="text-red-500">Erreur de connexion ou de traitement.</span>';
+            } finally {
+                btn.disabled = false;
+            }
+        });
+
+        document.getElementById('analyzeMarketBtn').addEventListener('click', async () => {
+            const marketQuestionInput = document.getElementById('marketQuestionInput');
+            const marketAnalysisOutput = document.getElementById('marketAnalysisOutput');
+            const question = marketQuestionInput.value.trim();
+
+            if (!question) {
+                marketAnalysisOutput.innerHTML = '<span class="text-red-500">Veuillez entrer une question.</span>';
+                return;
+            }
+
+            marketAnalysisOutput.innerHTML = '<span class="text-gray-400">Analyse en cours...</span>';
+            const btn = document.getElementById('analyzeMarketBtn');
+            btn.disabled = true;
+
+            const prompt = `En tant qu'expert du marché IT à Madagascar, réponds à la question suivante : "${question}". Basé sur les tendances actuelles et les opportunités pour une ESN spécialisée dans le développement web et mobile, l'intégration de solutions logicières et le conseil en transformation digitale.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    marketAnalysisOutput.innerHTML = `<p class="text-left">${text}</p>`;
+                } else {
+                    marketAnalysisOutput.innerHTML = '<span class="text-red-500">Erreur: Impossible d\'analyser le marché.</span>';
+                }
+            } catch (error) {
+                console.error('Erreur lors de l\'appel API Gemini:', error);
+                marketAnalysisOutput.innerHTML = '<span class="text-red-500">Erreur de connexion ou de traitement.</span>';
+            } finally {
+                btn.disabled = false;
+            }
+        });
+
+        document.getElementById('generateRecruitmentPitchBtn').addEventListener('click', async () => {
+            const recruitmentPitchInput = document.getElementById('recruitmentPitchInput');
+            const recruitmentPitchOutput = document.getElementById('recruitmentPitchOutput');
+            const profileDescription = recruitmentPitchInput.value.trim();
+
+            if (!profileDescription) {
+                recruitmentPitchOutput.innerHTML = '<span class="text-red-500">Veuillez décrire le profil recherché.</span>';
+                return;
+            }
+
+            recruitmentPitchOutput.innerHTML = '<span class="text-gray-400">Génération du pitch en cours...</span>';
+            const btn = document.getElementById('generateRecruitmentPitchBtn');
+            btn.disabled = true;
+
+            const prompt = `Rédige un pitch de recrutement court et attrayant pour une ESN nommée 'MadaDev Solutions' à Madagascar, basée sur le profil suivant : "${profileDescription}". Mets en avant les avantages de travailler à Madagascar et les opportunités de carrière au sein d'une ESN agile et innovante.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    recruitmentPitchOutput.innerHTML = `<p class="text-left">${text}</p>`;
+                } else {
+                    recruitmentPitchOutput.innerHTML = '<span class="text-red-500">Erreur: Impossible de générer le pitch.</span>';
+                }
+            } catch (error) {
+                console.error('Erreur lors de l\'appel API Gemini:', error);
+                recruitmentPitchOutput.innerHTML = '<span class="text-red-500">Erreur de connexion ou de traitement.</span>';
+            } finally {
+                btn.disabled = false;
+            }
+        });
+
+        document.getElementById('generateProjectIdeaBtn').addEventListener('click', async () => {
+            const projectIdeaInput = document.getElementById('projectIdeaInput');
+            const projectIdeaOutput = document.getElementById('projectIdeaOutput');
+            const domainOrTech = projectIdeaInput.value.trim();
+
+            if (!domainOrTech) {
+                projectIdeaOutput.innerHTML = '<span class="text-red-500">Veuillez entrer un domaine ou une technologie.</span>';
+                return;
+            }
+
+            projectIdeaOutput.innerHTML = '<span class="text-gray-400">Génération d\'idées de projets en cours...</span>';
+            const btn = document.getElementById('generateProjectIdeaBtn');
+            btn.disabled = true;
+
+            const prompt = `Génère 3 idées de projets innovants pour une ESN comme 'MadaDev Solutions' spécialisée dans le développement web et mobile, l'intégration de solutions logicières et le conseil en transformation digitale. Concentre-toi sur le domaine ou la technologie suivante : "${domainOrTech}". Pour chaque idée, donne un titre, une brève description et les technologies clés impliquées.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    projectIdeaOutput.innerHTML = `<pre class="whitespace-pre-wrap text-left">${text}</pre>`;
+                } else {
+                    projectIdeaOutput.innerHTML = '<span class="text-red-500">Erreur: Impossible de générer les idées de projets.</span>';
+                }
+            } catch (error) {
+                console.error('Erreur lors de l\'appel API Gemini:', error);
+                projectIdeaOutput.innerHTML = '<span class="text-red-500">Erreur de connexion ou de traitement.</span>';
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
